@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+
 import { Educacion } from '../models/educacion';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-private apiServerUrl=environment.apiBaseUrl;
+private apiServerUrl='https://tpback.onrender.com/';
 
   constructor(private http:HttpClient) { }
   public getEducation():Observable<Educacion[]>{
@@ -24,7 +24,7 @@ private apiServerUrl=environment.apiBaseUrl;
 
   }
   public DeleteEducacion(educacion: Educacion):Observable<void>{
-    return this.http.delete<void>('${this.apiServerUrl}/educacion/delete',educacion);
+    return this.http.delete<void>('${this.apiServerUrl}/educacion/delete/${educacionId}');
 
   }
 }

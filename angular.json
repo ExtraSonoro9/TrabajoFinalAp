@@ -25,12 +25,24 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+ 
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+
+              "node_modules/jquery/dist/jquery.min.js",
+
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+             ]
+
           },
           "configurations": {
             "production": {
+              
               "budgets": [
                 {
                   "type": "initial",
@@ -52,6 +64,7 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+
             }
           },
           "defaultConfiguration": "production"
@@ -87,9 +100,15 @@
               "src/assets"
             ],
             "styles": [
+
+             
               "src/styles.css"
+            
             ],
-            "scripts": []
+            
+            "scripts": [
+              
+            ]
           }
         }
       }
